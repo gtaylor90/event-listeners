@@ -90,7 +90,7 @@ hr.q-divider{
 /*TASK 1*/
 
 .nav-menu {
-  visibility: visible;
+  /*visibility: visible;*/
   opacity: 1;
   background: beige;
   padding: 15px;
