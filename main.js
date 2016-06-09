@@ -71,6 +71,7 @@ var guestList2 = function(newEventObject) {
         // guestListItem.innerHTML("<li class="guest">" + userText + "</li>")
         theList2.appendChild(guestListItem)
         guestListItem.appendChild(guestButton)
+        guestButton.textContent = "X"
         inputNode.value = ''
     }
 }
@@ -89,6 +90,8 @@ hideButton.addEventListener('click', hideExample)
 
 // Task three
 window.addEventListener('keydown', guestList2)
+var deleteButton = document.querySelector("#add-guest-bonus button")
+deleteButton.addEventListener("click", removeGuest)
 
 
 
