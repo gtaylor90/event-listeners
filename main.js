@@ -19,7 +19,8 @@ var guestListItem = document.querySelector("#add-guest input")
 var theList = document.querySelector("#add-guest ul")
 
 // Task Three Vars
-
+var theList2 = document.querySelector("#add-guest-bonus ul")
+var buttonList = document.querySelector("#add-guest-bonus li")
 
 // Functions here
 
@@ -39,12 +40,14 @@ var hideExample = function() {
     }
 }
 
+
+// Task number two
 var guestList = function(newEventObject) {
     if (newEventObject.keyCode === 13) {
+        var guestListItem = document.createElement("li")
         var inputNode = newEventObject.target
         var userText = inputNode.value
         console.log(userText)
-        var guestListItem = document.createElement("li")
         guestListItem.className = "guest"
         guestListItem.textContent = userText
         // guestListItem.innerHTML("<li class="guest">" + userText + "</li>")
@@ -54,14 +57,38 @@ var guestList = function(newEventObject) {
 }
 
 
+// Task number three
+var guestList2 = function(newEventObject) {
+    if (newEventObject.keyCode === 13) {
+        var inputNode = newEventObject.target
+        var userText = inputNode.value
+        var buttons = document.querySelector("#add-guest-bonus button")
+        console.log(userText)
+        var guestButton = document.createElement("button")
+        var guestListItem = document.createElement("li")
+        guestListItem.className = "guest"
+        guestListItem.textContent = userText
+        // guestListItem.innerHTML("<li class="guest">" + userText + "</li>")
+        theList2.appendChild(guestListItem)
+        guestListItem.appendChild(guestButton)
+        inputNode.value = ''
+    }
+}
+
+var removeGuest = function(){
+
+}
+
+
 // Task one
 hideButton.addEventListener('click', hideExample)
 
 
 // Task two
-window.addEventListener('keydown', guestList)
+// window.addEventListener('keydown', guestList)
 
-
+// Task three
+window.addEventListener('keydown', guestList2)
 
 
 
